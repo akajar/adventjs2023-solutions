@@ -1,9 +1,19 @@
-function findFirstRepeated(gifts) { //v1 - 220 pts
+function findFirstRepeated(gifts) { //v2 - 260 pts
   // Code here
-  const uniqueGifts = []
-  for(let gift of gifts){
-    if (uniqueGifts.includes(gift)) return gift;
-    else uniqueGifts.push(gift);
+  const seen = new Set();
+  for(const gift of gifts){
+    if (seen.has(gift)) return gift;
+    seen.add(gift);
   }
   return -1;
 }
+
+// function findFirstRepeated(gifts) { //v1 - 220 pts
+//   // Code here
+//   const uniqueGifts = []
+//   for(let gift of gifts){
+//     if (uniqueGifts.includes(gift)) return gift;
+//     else uniqueGifts.push(gift);
+//   }
+//   return -1;
+// }
