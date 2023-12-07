@@ -1,4 +1,4 @@
-function findNaughtyStep(original, modified) { //240 pts
+function findNaughtyStep(original, modified) { //260 pts
   // Code here
   if(original == modified) return '';
   const larger = original.length > modified.length? original: modified;
